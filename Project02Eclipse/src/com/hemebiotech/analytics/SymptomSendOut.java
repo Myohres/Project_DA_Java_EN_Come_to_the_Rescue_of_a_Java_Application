@@ -22,7 +22,7 @@ import java.util.Set;
                 symptomOut = new FileWriter(OUTPUT_FILE);
             } catch (IOException e) {
                 e.printStackTrace();
-                System.out.println("Fichier Symptom.out erreur");
+                System.out.println("File Symptom.out error");
             }
 
             Set listKeys = symptomTab.keySet();
@@ -33,7 +33,7 @@ import java.util.Set;
                     symptomOut.write(key + " : " + symptomTab.get(key) + "\n");
                 } catch (IOException e) {
                     e.printStackTrace();
-                    System.out.println("Erreur ecriture tableau sur fichier.out");
+                    System.out.println("Error writing board to file.out");
                 }
             }
 
