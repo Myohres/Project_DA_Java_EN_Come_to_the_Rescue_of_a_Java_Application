@@ -5,15 +5,15 @@ import java.io.*;
 import java.util.*;
 
 /** SymptomOrder
- * Compter et classer alphabetiquement les symptoms du fichier Symptoms.txt contenu dans reader
+ * to count and to classify alphabetically  symptoms from file Symptoms.txt in reader
  *
- * création d'un treemap
- * clé : un symptom
- * valeur : nombre d'itéaration du symptom
+ * creation one treemap
+ * key : one symptom
+ * value : symptom number iteration
  *
- * Pour chaque ligne du bufferreader reader lue
- * si symptom (key) est nn présente, ajout d'une entré au Treemap ac ligne = key et valeur initialisé à 1
- * si symtpom (key déja présente on ajoute +1 à la valeur de la clé du tableau
+ * For each bufferreader reader line :
+ * if symptom (key) is not present, new entrance to Treemap with line = key and value=1
+ * if symtpom (key) already present,  +1 to Treemap key value
  */
 
 

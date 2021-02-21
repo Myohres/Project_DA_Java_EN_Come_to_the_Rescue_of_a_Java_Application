@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Set;
 
     /** SymptomSendOut
-     * Ecrire les clés et valeurs du symptomTab dans un fichier de sortie OUT_PUT;
+     * write  keys and values of symptomTab to a outfile OUT_PUT;
      *
      *
      *
