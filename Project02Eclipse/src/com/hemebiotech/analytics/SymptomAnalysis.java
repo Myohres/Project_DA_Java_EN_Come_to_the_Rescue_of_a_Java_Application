@@ -16,9 +16,9 @@ public class SymptomAnalysis {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(INPUT_FILE));
 
-            Map<String, Integer> symptomTab = SymptomOrder.symptomTab(reader); // tableau contenant les symptoms comptés et triés
+            Map<String, Integer> symptomTab = SymptomOrder.symptomTab(reader); // board with symptoms counted and indexed
 
-            SymptomSendOut.sendOut(OUTPUT_FILE,symptomTab); // exportation du tableau sur fichier.out
+            SymptomSendOut.sendOut(OUTPUT_FILE,symptomTab); // exportation of board to Symptom.out
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
