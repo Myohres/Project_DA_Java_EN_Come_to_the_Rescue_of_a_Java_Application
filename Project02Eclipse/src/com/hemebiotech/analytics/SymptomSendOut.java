@@ -1,12 +1,7 @@
 package com.hemebiotech.analytics;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Map;
-import java.util.Set;
 
-public class SymptomSendOut {
-    import java.io.FileWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 import java.util.Set;
@@ -53,4 +48,4 @@ import java.util.Set;
     }
 
 
-}
+

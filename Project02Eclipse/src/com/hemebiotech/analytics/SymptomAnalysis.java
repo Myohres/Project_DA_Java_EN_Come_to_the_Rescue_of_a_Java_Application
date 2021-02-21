@@ -1,9 +1,11 @@
+package com.hemebiotech.analytics;
+
 import java.io.*;
 import java.util.*;
 
 public class SymptomAnalysis {
 
-    public static final String INPUT_FILE = "symptoms.txt";
+    public static final String INPUT_FILE = "Project02Eclipse/symptoms.txt";
     public static final String OUTPUT_FILE = "Symptom.out";
 
 

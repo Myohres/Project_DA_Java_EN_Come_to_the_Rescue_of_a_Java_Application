@@ -19,7 +19,7 @@ import java.util.*;
 
 public class SymptomOrder {
 
-    public static Map<String, Integer> symptomTab(BufferedReader reader){
+    public static Map<String, Integer> symptomTab(BufferedReader reader) {
 
         String line = "";
         Map<String, Integer> symptomTab = new TreeMap<>();
@@ -42,3 +42,4 @@ public class SymptomOrder {
         }
         return symptomTab;
     }
+}
