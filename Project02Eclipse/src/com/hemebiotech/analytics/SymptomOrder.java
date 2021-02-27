@@ -20,8 +20,7 @@ import java.util.*;
 public class SymptomOrder {
 
 
-
-    public static Map<String, Integer> symptomTab()  {
+    public static Map<String, Integer> symptomTab() {
 
         final String INPUT_FILE = "symptoms.txt";
         BufferedReader reader = null;
@@ -37,27 +36,24 @@ public class SymptomOrder {
         String line = "";
         Map<String, Integer> symptomTab = new TreeMap<>();
 
-        /*
-        for (line="", line !=null, line=reader.readLine())*/
+
+        try {
+
+            while ((line=reader.readLine())!= null) {
+
+                System.out.println(line);
 
 
-       while (line !=null) {
+                if (!symptomTab.containsKey(line)) {
+                    symptomTab.put(line, 1);
 
+                } else {
+                    symptomTab.put(line, symptomTab.get(line) + 1);
 
-           try {
-               line = Objects.requireNonNull(reader).readLine();
-           } catch (IOException e) {
-               e.printStackTrace();
-           }
-
-
-           if (!symptomTab.containsKey(line)) {
-                symptomTab.put(line, 1);
-
-            } else {
-                symptomTab.put(line, symptomTab.get(line) + 1);
-
+                }
             }
+        }  catch (IOException e) {
+            e.printStackTrace();
         }
         return symptomTab;
     }
