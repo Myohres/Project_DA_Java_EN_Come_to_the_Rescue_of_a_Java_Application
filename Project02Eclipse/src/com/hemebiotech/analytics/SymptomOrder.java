@@ -21,7 +21,7 @@ public class SymptomOrder {
 
 
 
-    public static Map<String, Integer> symptomTab() {
+    public static Map<String, Integer> symptomTab()  {
 
         final String INPUT_FILE = "symptoms.txt";
         BufferedReader reader = null;
@@ -37,15 +37,21 @@ public class SymptomOrder {
         String line = "";
         Map<String, Integer> symptomTab = new TreeMap<>();
 
-        while (true) {
-            try {
-                assert reader != null;
-                if ((line = reader.readLine()) == null) break;
-            } catch (IOException e) {
-                e.printStackTrace();
-                System.out.println("");
-            }
-            if (!symptomTab.containsKey(line)) {
+        /*
+        for (line="", line !=null, line=reader.readLine())*/
+
+
+       while (line !=null) {
+
+
+           try {
+               line = Objects.requireNonNull(reader).readLine();
+           } catch (IOException e) {
+               e.printStackTrace();
+           }
+
+
+           if (!symptomTab.containsKey(line)) {
                 symptomTab.put(line, 1);
 
             } else {
