@@ -20,6 +20,7 @@ import java.util.Set;
             FileWriter symptomOut;
             try {
                 symptomOut = new FileWriter(OUTPUT_FILE);
+
                 Set<String> listKeys = symptomTab.keySet();
 
                 for (String key : listKeys) {
@@ -31,6 +32,7 @@ import java.util.Set;
 
             } catch (IOException e) {
                 e.printStackTrace();
+                System.out.println("symptom out file error");
             }
         }
     }

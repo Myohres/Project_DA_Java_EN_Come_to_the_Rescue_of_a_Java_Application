@@ -19,26 +19,16 @@ import java.util.*;
 
 public class SymptomOrder {
 
-
     final static String INPUT_FILE = "symptoms.txt";
-    public static  BufferedReader reader;
-
-    static {
-        try {
-            reader = new BufferedReader(new FileReader(INPUT_FILE));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
 
     public static Map<String, Integer> symptomTab() {
 
-
-        String line = "";
+        BufferedReader reader;
         Map<String, Integer> symptomTab = new TreeMap<>();
 
-
         try {
+            reader = new BufferedReader(new FileReader(INPUT_FILE));
+            String line;
 
             while ((line=reader.readLine())!= null) {
 
@@ -47,11 +37,12 @@ public class SymptomOrder {
 
                 } else {
                     symptomTab.put(line, symptomTab.get(line) + 1);
-
                 }
             }
+
         }  catch (IOException e) {
             e.printStackTrace();
+            System.out.println(" input file reading error");
         }
 
         return symptomTab;
