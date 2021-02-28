@@ -17,33 +17,21 @@ import java.util.Set;
 
         public static void sendOut (String OUTPUT_FILE, Map<String, Integer> symptomTab)  {
 
-            FileWriter symptomOut = null;
+            FileWriter symptomOut;
             try {
                 symptomOut = new FileWriter(OUTPUT_FILE);
-            } catch (IOException e) {
-                e.printStackTrace();
-                System.out.println("File Symptom.out error");
-            }
+                Set<String> listKeys = symptomTab.keySet();
 
-            Set listKeys = symptomTab.keySet();
+                for (String key : listKeys) {
 
-            for (Object key : listKeys) {
-                try {
-                    assert symptomOut != null;
                     symptomOut.write(key + " : " + symptomTab.get(key) + "\n");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    System.out.println("Error writing board to file.out");
-                }
-            }
 
-            try {
-                assert symptomOut != null;
+                }
                 symptomOut.close();
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
     }
 
