@@ -20,18 +20,19 @@ import java.util.*;
 public class SymptomOrder {
 
 
+    final static String INPUT_FILE = "symptoms.txt";
+    public static  BufferedReader reader;
+
+    static {
+        try {
+            reader = new BufferedReader(new FileReader(INPUT_FILE));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static Map<String, Integer> symptomTab() {
 
-        final String INPUT_FILE = "symptoms.txt";
-        BufferedReader reader = null;
-
-        {
-            try {
-                reader = new BufferedReader(new FileReader(INPUT_FILE));
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-        }
 
         String line = "";
         Map<String, Integer> symptomTab = new TreeMap<>();
@@ -40,9 +41,6 @@ public class SymptomOrder {
         try {
 
             while ((line=reader.readLine())!= null) {
-
-                System.out.println(line);
-
 
                 if (!symptomTab.containsKey(line)) {
                     symptomTab.put(line, 1);
@@ -55,6 +53,7 @@ public class SymptomOrder {
         }  catch (IOException e) {
             e.printStackTrace();
         }
+
         return symptomTab;
     }
 }
