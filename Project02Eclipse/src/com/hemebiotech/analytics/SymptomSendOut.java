@@ -18,6 +18,7 @@ import java.util.Set;
         public static void sendOut (String OUTPUT_FILE, Map<String, Integer> symptomTab)  {
 
             FileWriter symptomOut;
+
             try {
                 symptomOut = new FileWriter(OUTPUT_FILE);
 
@@ -29,7 +30,6 @@ import java.util.Set;
 
                 }
                 symptomOut.close();
-
             } catch (IOException e) {
                 e.printStackTrace();
                 System.out.println("symptom out file error");

@@ -30,17 +30,16 @@ public class SymptomOrder {
             reader = new BufferedReader(new FileReader(INPUT_FILE));
             String line;
 
-            while ((line=reader.readLine())!= null) {
-
+            while ((line=reader.readLine())!= null)
+            {
                 if (!symptomTab.containsKey(line)) {
                     symptomTab.put(line, 1);
-
-                } else {
+                }
+                else {
                     symptomTab.put(line, symptomTab.get(line) + 1);
                 }
             }
-
-        }  catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
             System.out.println(" input file reading error");
         }
