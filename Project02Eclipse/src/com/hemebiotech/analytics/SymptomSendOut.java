@@ -10,15 +10,19 @@ import java.util.Set;
 
 /** SymptomSendOut
  * write  keys and values of symptomTab to a outfile OUT_PUT;
- *
- *
- *
  */
-
 public class SymptomSendOut {
 
     private static final String OUTPUT_FILE = "Symptom.out";
 
+    /**
+     * ceation Filewriter symptomOut,
+     * symptomTab keys and values in Set listKeys,
+     * for each keys in listKey :
+     * write keys and values in symptomOut
+     * @param symptomTab
+     * @throws OutputFileException
+     */
     public void sendOut (Map<String, Integer> symptomTab) throws OutputFileException {
         FileWriter symptomOut;
         try {
