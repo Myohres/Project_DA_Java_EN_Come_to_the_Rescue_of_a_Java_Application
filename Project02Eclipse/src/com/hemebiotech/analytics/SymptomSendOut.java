@@ -17,10 +17,10 @@ import java.util.Set;
 
 public class SymptomSendOut {
 
-    public void sendOut (String OUTPUT_FILE, Map<String, Integer> symptomTab) throws OutputFileException {
+    private static final String OUTPUT_FILE = "Symptom.out";
 
+    public void sendOut (Map<String, Integer> symptomTab) throws OutputFileException {
         FileWriter symptomOut;
-
         try {
             symptomOut = new FileWriter(OUTPUT_FILE);
             Set<String> listKeys = symptomTab.keySet();
