@@ -1,5 +1,7 @@
 package com.hemebiotech.analytics;
 
+import com.hemebiotech.analytics.exception.InputFileException;
+
 import java.io.IOException;
 import java.io.*;
 import java.util.*;
@@ -21,7 +23,7 @@ public class SymptomOrder {
 
     private final static String INPUT_FILE = "symptoms.txt";
 
-    public  Map<String, Integer> symptomTab() {
+    public  Map<String, Integer> symptomTab() throws InputFileException {
 
         BufferedReader reader;
         Map<String, Integer> symptomTab = new TreeMap<>();
@@ -40,8 +42,8 @@ public class SymptomOrder {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println(" input file reading error");
+            throw new InputFileException("File " + INPUT_FILE + " is impossible to read");
+
         }
 
         return symptomTab;
