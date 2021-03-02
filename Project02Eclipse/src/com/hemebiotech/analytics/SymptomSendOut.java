@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Set;
 
-/** SymptomSendOut
+/**
  * write  keys and values of symptomTab to a outfile OUT_PUT;
  */
 public class SymptomSendOut {
@@ -20,8 +20,8 @@ public class SymptomSendOut {
      * symptomTab keys and values in Set listKeys,
      * for each keys in listKey :
      * write keys and values in symptomOut
-     * @param symptomTab
-     * @throws OutputFileException
+     * @param symptomTab Treemap with symptoms key and iteration values
+     * @throws OutputFileException Output file cant be written
      */
     public void sendOut (Map<String, Integer> symptomTab) throws OutputFileException {
         FileWriter symptomOut;

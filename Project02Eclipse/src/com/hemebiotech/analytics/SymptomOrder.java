@@ -21,7 +21,7 @@ public class SymptomOrder {
      * if symptom (key) is not present new entrance to Treemap with key = line and value=1,
      * if symtpom (key) already present +1 to Treemap key value
      * @return Treemap symptomTab
-     * @throws InputFileException
+     * @throws InputFileException Input file is not read
      */
     public  Map<String, Integer> symptomTab() throws InputFileException {
 
