@@ -19,9 +19,9 @@ import java.util.*;
 
 public class SymptomOrder {
 
-    final static String INPUT_FILE = "symptoms.txt";
+    private final static String INPUT_FILE = "symptoms.txt";
 
-    public static Map<String, Integer> symptomTab() {
+    public  Map<String, Integer> symptomTab() {
 
         BufferedReader reader;
         Map<String, Integer> symptomTab = new TreeMap<>();

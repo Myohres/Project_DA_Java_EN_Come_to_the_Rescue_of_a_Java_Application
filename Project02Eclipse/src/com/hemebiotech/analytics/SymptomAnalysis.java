@@ -11,9 +11,9 @@ public class SymptomAnalysis {
 
     public static void main(String[] Args)  {
 
-        Map<String, Integer> symptomTab = SymptomOrder.symptomTab(); // board with symptoms counted and indexed
+        Map<String, Integer> symptomTab = new SymptomOrder().symptomTab(); // board with symptoms counted and indexed
 
-        SymptomSendOut.sendOut(OUTPUT_FILE, symptomTab); // exportation of board to Symptom.out
+        new SymptomSendOut().sendOut(OUTPUT_FILE, symptomTab); // exportation of board to Symptom.out
 
     }
 }

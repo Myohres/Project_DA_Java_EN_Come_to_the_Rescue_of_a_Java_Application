@@ -15,7 +15,7 @@ import java.util.Set;
 
     public class SymptomSendOut {
 
-        public static void sendOut (String OUTPUT_FILE, Map<String, Integer> symptomTab)  {
+        public void sendOut (String OUTPUT_FILE, Map<String, Integer> symptomTab)  {
 
             FileWriter symptomOut;
 
